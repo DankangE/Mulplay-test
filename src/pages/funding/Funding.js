@@ -213,6 +213,9 @@ const Funding = () => {
             <div className="middle2-right-3">
               <OutlinedCard fcard={2} />
             </div>
+            <div className="middle2-right-3">
+              <OutlinedCard fcard={3} />
+            </div>
           </div>
         </div>
         <div className="bottom">
