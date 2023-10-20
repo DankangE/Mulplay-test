@@ -4,21 +4,31 @@
 
 .fundinglist_tab {
     margin-top: 100px;
+    margin-bottom: 100px;
     height: 120px;
-  background: #3c40c6;
   text-align: center;
 }
 
 .fundinglist_tabs {
-  background: #ff5e57;
   display: inline-block;
     list-style:none;
     margin:0 auto;
     padding:0;
 }
 
+.fundinglist_Imagetab {
+    background-color: #fff;
+    border: #fff;
+}
+
+.fundinglist_tabs .Imagetab_img {
+    width: 100px;
+    margin-bottom: 15px;
+    background: #fff;
+    box-shadow: 0.5px 2px 10px rgb(168, 168, 168);
+}
+
 .fundinglist_tabs li {
-    background: #13a4e1;
     width: 100px;
     margin: 20px;
     padding: 0;
@@ -26,43 +36,38 @@
 }
 
 .fundinglist_contents {
-    background: #d991dd;
     margin: 0 auto;
     width: 1300px;
     min-height: 500px;
 }
 
 .fundinglist_title {
-    background: #65e113;
     display: flex;
 }
 
 .fundinglist_title p{
-    background: #e6b253;
     flex: 1;
-    margin: 15px;
-    font-size: 20px;
+    margin: 15px 15px 0px 45px;
+    font-size: 26px;
     font-weight: 600;
 }
 
 .fundinglist_title_tab {
     flex: 1;
-    background: #ff5e57;
     display: inline-block;
+    margin-left: 300px;
 }
 
 .fundinglist_title_tab ul {
     flex: 1;
-    background: #f5c7c4;
     list-style:none;
-    margin:0 auto;
     padding:0;
 }
 
 .fundinglist_title_tab li {
-    background: #13a4e1;
     width: 100px;
-    margin: 20px;
+    margin: 20px 00px 0px 0px;
+    right: 0;
     text-align: center;
     padding: 0;
     float: left;
