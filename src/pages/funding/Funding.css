@@ -1,0 +1,363 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  .fund_container{
+    width: 1100px;
+    margin: 100px auto;
+  }
+  .fund_container div{
+    text-align: center;
+    display: table;
+  }
+  .fund_container div span{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .top{
+    margin: 20px 0px 100px 0px;
+    width: 1100px;
+    height: 80px;
+    display: table;
+  }
+
+  .top h1 {
+    margin-top: 20px;
+  }
+
+  .top2{
+    margin-top: 100px;
+    border-bottom: 1px solid #9F9F9F;
+    width: 1100px;
+    height: 50px;
+    display: table;
+  }
+
+  /* 첫번째 내용 */
+  .middle{
+    position: relative;
+    margin-top: 20px;
+    width: 1100px;
+    height: 500px;
+  }
+  .middle-left1{
+    position: absolute;
+    top: 0px;
+    width: 700px;
+    height: 600px;
+  }
+  
+  .middle-left1-1{
+    position: relative;
+    overflow:hidden;
+    border-radius: 20px;
+    width: 700px;
+    height: 460px;
+  }
+  .middle-left1-2{
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 700px;
+    height: auto;
+    background-color: #F2F4F6;
+  }
+
+  .middle-left2{
+    outline: 1px solid #9F9F9F;
+    border-radius: 20px;
+    position: absolute;
+    top: 0px;
+    width: 700px;
+    height: 500px;
+    background-color: #00D8FF;
+  }
+
+  .ml-image {
+    position: absolute; 
+    top:0; 
+    left: 0;
+    width: 700px;
+    height: 470px;
+    object-fit: cover;
+  }
+
+  .fintro {
+    margin: 20px 20px 0 20px;
+    font-size: 14px;
+  }
+
+  .fmaker {
+    margin: 10px 20px 20px 20px;
+    font-size: 14px;
+    color: #555555;
+  }
+
+  .fmaker > .fmaker-text {
+    float: left;
+    margin-right: 20px;
+    color: #333333;
+  }
+
+
+  .middle-right{
+    position: absolute;
+    top: 0px;
+    left: 720px;
+    width: 380px;
+    height: 600px;
+  }
+  .middle-right-1{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    outline: 1px solid #9F9F9F;
+    width: 380px;
+    height: 220px;
+  }
+
+  .fund_hashtag {
+    margin: 15px 20px 15px 20px;
+  }
+
+  .fund_hashtag .fund_tag {
+    display: inline-block;
+    border-radius: 2px;
+    padding: 2px 10px; 
+    margin: 0 10px 0 0px; 
+    font-weight: normal; 
+    font-size: 11px; 
+    background: #d9d9d9; 
+    color: #848484;
+    }
+
+    .fund_hashtag .fund_tag:hover{
+        background-color: #ebebeb;
+    }
+
+  .time, .class, .people, .stack, .current, .goal, .date {
+    font-size: 14px;
+    margin: 10px 20px 10px 20px;
+    color: #5f5f5f;
+  }
+
+  .stack {
+    margin: 10px 20px 40px 20px;
+  }
+
+  .mr1-title {
+    color: #888888;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+
+  .mr1-text {
+    float: left;
+    padding: 2px 10px;
+    margin: 0;
+    font-weight: bold; 
+    font-size: 11px;
+    color: #333333;
+  }
+
+  .middle-left1-1 > div > .mr1-title {
+    margin-right: 20px;
+  }
+
+
+  .middle-right-2{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: 1px solid #9F9F9F;
+    margin-top: 0px;
+    width: 380px;
+    height: 230px;
+  }
+
+  .middle-right-2 .current-text {
+    font-size: 12px;
+    margin: 20px 0 0 20px;
+  }
+
+  .middle-right-3{
+    margin-top: 10px;
+    width: 380px;
+    height: 120px;
+  }
+  
+
+  .fbtn1, .fbtn2 {
+    border-radius: 10px;
+    background-color: #ffffff;
+    min-width: 30px;
+    min-height: 30px;
+    float: left;
+    margin: 40px 10px 40px 10px;
+  }
+
+  .sidebtn {
+    top:0; 
+    left: 0;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+
+  .fbtn3 {
+    margin: 40px auto;
+  }
+
+  /* 프로젝트 더보기 */
+  .bottom{
+    margin-top: 200px;
+    margin-bottom: 20px;
+    width: 1100px;
+    height: 100px;
+    border-top: 1px solid #848484;
+  }
+  
+
+  /* 프로젝트 상세보기 바 */
+  /* .fnav {
+    margin-top: 30px;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .fnav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+  
+    .fnav li {
+         margin-right: 30px;
+         font-size: 14px;
+      } */
+
+      /* 2번째 내용 */
+      .middle2{
+        margin-top: 20px;
+        width: 1100px;
+        height: 500px;
+        position: relative;
+      }
+
+      .middle2-left2{
+        border-radius: 20px;
+        position: absolute;
+        top: 0px;
+        width: 700px;
+        height: 500px;
+      }
+      
+      .ml2-component {
+        position: relative;
+        display: block;
+        align-items: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        width: 600px;
+        height: 460px;
+        border-radius: 20px;
+      }
+
+      .search-btn {
+        width: 650px;
+        height: 50px;
+        background-color: #fff;
+        border: 1px solid #EE833E;
+        color: #EE833E;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+
+      .search-results > img {
+        margin: 50px auto;
+        position: relative; 
+        top:0; 
+        left: 0;
+        width: 600px;
+        object-fit: cover;
+      }
+
+      .middle2-right{
+        position: absolute;
+        top: 0px;
+        left: 760px;
+        width: 380px;
+        height: 500px;
+      }
+      .middle2-right-1{
+        border-radius: 10px;
+        margin-bottom: 20px;
+        min-width: 280px;
+        height: 180px;
+      }
+      .middle2-right-2{
+        border-radius: 10px;
+        margin-bottom: 20px;
+        min-width: 280px;
+        height: 180px;
+      }
+      .middle2-right-3{
+        border-radius: 10px;
+        margin-bottom: 20px;
+        min-width: 280px;
+        height: 180px;
+      }
+
+      .middle2-right ul {
+        display: block;
+        list-style: none;
+        padding: 0;
+      }
+    
+      .middle2-right li {
+           margin-right: 30px;
+           font-size: 14px;
+      }
+
+/* 
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 900px;
+    }
+
+    .top, .top2, .bottom {
+        width: 900px;
+    }
+
+    .middle {
+        width: 900px;
+    }
+
+    .middle-left1,
+    .middle-left2,
+    .middle-left1-1,
+    .middle-left1-2 {
+        width: 600px;
+    }
+
+    .middle-right,
+    .middle-right-1,
+    .middle-right-2,
+    .middle-right-3 {
+        width: 280px;
+        left : 620px;
+    }
+
+    .middle2 {
+      width: 900px;
+    }
+
+    .middle2-right,
+    .middle2-right1,
+    .middle2-right2,
+    .middle2-right3 {
+        width: 280px;
+        left : 620px;
+    }
+
+} */

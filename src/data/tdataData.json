@@ -1,0 +1,18 @@
+[
+  { "tdata_no": 1, "tdata_type": 1, "tdata_name": "금용" },
+  { "tdata_no": 2, "tdata_type": 1, "tdata_name": "애플리케이션" },
+  { "tdata_no": 3, "tdata_type": 1, "tdata_name": "android" },
+  { "tdata_no": 4, "tdata_type": 1, "tdata_name": "ios" },
+  { "tdata_no": 5, "tdata_type": 1, "tdata_name": "서비스" },
+  { "tdata_no": 6, "tdata_type": 1, "tdata_name": "게임" },
+  { "tdata_no": 7, "tdata_type": 2, "tdata_name": "PM" },
+  { "tdata_no": 8, "tdata_type": 2, "tdata_name": "Front-end" },
+  { "tdata_no": 9, "tdata_type": 2, "tdata_name": "Back-end" },
+  { "tdata_no": 10, "tdata_type": 2, "tdata_name": "디자이너" },
+  { "tdata_no": 11, "tdata_type": 2, "tdata_name": "엔지니어" },
+  { "tdata_no": 12, "tdata_type": 3, "tdata_name": "Java" },
+  { "tdata_no": 13, "tdata_type": 3, "tdata_name": "Linux" },
+  { "tdata_no": 14, "tdata_type": 3, "tdata_name": "Spring" },
+  { "tdata_no": 15, "tdata_type": 3, "tdata_name": "Nextjs" },
+  { "tdata_no": 16, "tdata_type": 3, "tdata_name": "Mysql" }
+]

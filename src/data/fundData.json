@@ -1,0 +1,22 @@
+[
+  { "fund_no": 1, "user_no": 10, "fund_price": 15090 },
+  { "fund_no": 2, "user_no": 3, "fund_price": 76934 },
+  { "fund_no": 3, "user_no": 1, "fund_price": 4932 },
+  { "fund_no": 4, "user_no": 10, "fund_price": 76620 },
+  { "fund_no": 5, "user_no": 18, "fund_price": 21566 },
+  { "fund_no": 6, "user_no": 15, "fund_price": 76643 },
+  { "fund_no": 7, "user_no": 5, "fund_price": 80688 },
+  { "fund_no": 8, "user_no": 3, "fund_price": 52445 },
+  { "fund_no": 9, "user_no": 6, "fund_price": 67575 },
+  { "fund_no": 10, "user_no": 4, "fund_price": 51770 },
+  { "fund_no": 11, "user_no": 2, "fund_price": 93089 },
+  { "fund_no": 12, "user_no": 5, "fund_price": 75214 },
+  { "fund_no": 13, "user_no": 17, "fund_price": 3285 },
+  { "fund_no": 14, "user_no": 5, "fund_price": 91238 },
+  { "fund_no": 15, "user_no": 9, "fund_price": 48946 },
+  { "fund_no": 16, "user_no": 9, "fund_price": 73075 },
+  { "fund_no": 17, "user_no": 4, "fund_price": 97218 },
+  { "fund_no": 18, "user_no": 13, "fund_price": 93322 },
+  { "fund_no": 19, "user_no": 5, "fund_price": 70607 },
+  { "fund_no": 20, "user_no": 20, "fund_price": 22210 }
+]

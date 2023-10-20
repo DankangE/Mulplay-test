@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.cart {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.cart_container{
+  width: 800px;
+  margin: 100px auto;
+}
+
+.cart_container span {
+  font-weight: 600;
+}
+
+.cart_container div{
+  text-align: center;
+  display: table;
+}
+.cart_container div span{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.ctitle{
+  margin: 100px auto;
+  width: 800px;
+  height: 80px;
+  display: table;
+  background-color: #ffffff;
+}
+
+.ctitle-reward {
+  border-radius: 4px;
+  width: 800px;
+  height: 100%;
+  display: table;
+  background-color: #ffffff;
+}
+.reward-info-title {
+  float: left;
+}
+.modal {
+  float: right;
+}
+
+.modal-cart-card {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.ctitle h2 {
+  margin-top: 20px;
+}
+
+.clist1 {
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  border: 1px solid #9F9F9F;
+  width: 800px;
+  height: 100%;
+  display: table;
+  background-color: #ffffff;
+}
+
+.clist2 {
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  border-top: 1px solid #9F9F9F;
+  border-bottom: 1px solid #9F9F9F;
+  width: 800px;
+  height: 100%;
+  display: table;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.clist2 .clist2-text {
+  float: left;
+  margin: 20px;
+}
+
+.clist2 .clist2-price {
+  float: right;
+  margin: 20px;
+  color: #EE833E;
+}
+
+.clist3 {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  width: 800px;
+  height: 100%;
+  display: table;
+  background-color: #ffffff;
+}
+
+.citembox {
+  margin: 40px;
+}
+
+.cuserbox {
+  margin: 40px;
+}
+
+.cuser {
+  display: inline-block;
+  margin: 10px;
+}
+
+.user-text {
+  margin-left: 40px;
+}
+
+.text1, .text4 {
+  margin-left: 55px;
+}
+
+.cpayment {
+  margin: 20px;
+}
+
+.cpayment input {
+  margin-right: 10px;
+}
+
+label {
+  margin-right: 20px;
+}

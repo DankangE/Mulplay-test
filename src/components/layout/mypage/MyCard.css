@@ -1,0 +1,25 @@
+.myCard{
+    border: 1px solid #d2d2d2;
+    border-radius: 20px;
+    display: flex;
+    width: 800px;
+    padding: 10px;
+    position: relative;
+}
+
+.cardTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cardContent{
+    font-size:14px;
+    color:#888888;
+}
+.cardDate{
+    font-size: 12px;
+    color: #555555;
+    padding-top: 30px;
+};
+
+

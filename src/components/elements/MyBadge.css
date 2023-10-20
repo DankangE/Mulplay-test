@@ -1,0 +1,21 @@
+
+.MyBadge{
+    width: 55px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-align: center;
+ 
+}
+.MyBadge_neutral {
+    background-color: #F6F6F6;
+    color: #333333;
+}
+.MyBadge_positive{
+    background-color: #EE833E;
+    color:white
+}
+.MyBadge_negative{
+    background-color: #888888;
+    color: white;
+}

@@ -1,0 +1,115 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* reset */
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* container */
+#container_signup {
+  width: 445px;
+  height: auto;
+  background-color: #ddd;
+  margin: 100px auto;
+}
+#container_signup header {
+  display: block;
+  width: 100%;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  color: #333;
+  text-align: left;
+}
+#container_signup .form_signup {
+  display: block;
+}
+#container_signup .form_signup .input_box {
+  width: 100%;
+  margin-top: 20px;
+}
+/* #container_signup .form_signup .input_box.email .column {
+  display: flex;
+} */
+#container_signup .form_signup .input_box label {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+#container_signup .form_signup .input_box input {
+  width: 100%;
+  height: 55px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #888;
+  outline: none;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.select_box select {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: #888;
+}
+
+#container_signup .form_signup .select_box {
+  width: 100%;
+  height: 55px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #888;
+  outline: none;
+  border: #d1d1d1;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.btn_search {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(238, 131, 62);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.form_signup .column {
+  display: flex;
+  /* column-gap: 15px; */
+}
+
+#container_signup .input_box input:focus {
+  box-shadow: 0 1px 0 rgb(0, 0, 0, 0.1);
+}
+
+.form_signup .btn_signup {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(238, 131, 62);
+  margin-top: 40px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.form_signup .btn_signup:hover {
+  background-color: rgb(253, 160, 98);
+}

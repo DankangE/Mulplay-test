@@ -1,0 +1,40 @@
+.myProjectManage{
+  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.myProjectManage .tabContainer{
+    padding: 40px;
+}
+
+.myProjectManage .tabContainer button{
+    border: 1px solid #c8c8c8;
+    background-color: white;
+    border-radius: 20px;
+    height: 30px;
+    width: 65px;
+    padding: 5px;
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.myProjectManage .tabContainer button.active{
+    border: none;
+    background-color: #333333;
+    color: white;
+}
+
+.myProjectManage > .projectList{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 왼쪽 정렬 */
+    padding-top: 30px;
+
+}
+
+
+

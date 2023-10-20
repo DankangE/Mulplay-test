@@ -1,0 +1,177 @@
+.fundinglistpage {
+    min-height: 500px;
+}
+
+.fundinglist_tab {
+    margin-top: 100px;
+    height: 120px;
+  background: #3c40c6;
+  text-align: center;
+}
+
+.fundinglist_tabs {
+  background: #ff5e57;
+  display: inline-block;
+    list-style:none;
+    margin:0 auto;
+    padding:0;
+}
+
+.fundinglist_tabs li {
+    background: #13a4e1;
+    width: 100px;
+    margin: 20px;
+    padding: 0;
+    float: left;
+}
+
+.fundinglist_contents {
+    background: #d991dd;
+    margin: 0 auto;
+    width: 1300px;
+    min-height: 500px;
+}
+
+.fundinglist_title {
+    background: #65e113;
+    display: flex;
+}
+
+.fundinglist_title p{
+    background: #e6b253;
+    flex: 1;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.fundinglist_title_tab {
+    flex: 1;
+    background: #ff5e57;
+    display: inline-block;
+}
+
+.fundinglist_title_tab ul {
+    flex: 1;
+    background: #f5c7c4;
+    list-style:none;
+    margin:0 auto;
+    padding:0;
+}
+
+.fundinglist_title_tab li {
+    background: #13a4e1;
+    width: 100px;
+    margin: 20px;
+    text-align: center;
+    padding: 0;
+    float: left;
+}
+
+
+/* 펀딩 카로셀 카드 */
+.fundinglist_mainCard {
+    width: 350px;
+    height: 420px;
+    border: solid 1px #c8c8c8;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 40px;
+    display: inline-block;
+    /* padding: 20px; */
+  }
+  .fundinglist_dday {
+    width: 54px;
+    height: 26px;
+    font-size: 14px;
+    background-color: #ee833e;
+    color: white;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 26px;
+    display: inline;
+    position: absolute;
+    margin: 10px;
+  }
+  .fundinglist_img {
+    width: 350px;
+    height: 220px;
+    display: inline-block;
+  }
+  .fundinglist_tag {
+    background-color: #ebebeb;
+    border-radius: 4px;
+    padding: 10px;
+    width: 50px;
+    height: 25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #555555;
+    margin: 0px 5px 5px 10px;
+    line-height: 5px;
+    text-align: center;
+  }
+
+
+  .fundinglist_cardInfo {
+    background-color: white;
+    border-top: solid 1px #c8c8c8;
+  }
+  .fundinglist_cardInfo ul {
+    list-style:none;
+    margin:0 auto;
+    padding:0;
+  }
+  .fundinglist_cardInfo ul li {
+    float: left;
+  }
+  .fundinglist_cardTitle {
+    width: 350px;
+    /* padding: 0px 10px 10px 10px; */
+    font-size: 24px;
+    color: #333333;
+    font-weight: bold;
+    padding-left: 10px;
+    display: block;
+    text-align: left;
+    letter-spacing: -0.5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .fundinglist_cardSubtitle {
+    font-size: 14px;
+    color: #555555;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .fundinglist_cardFooter {
+    margin-top: 20px;
+    display: flex;
+  }
+  .fundinglist_cardFunding {
+    flex: 3;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ee833e;
+    margin-left: 10px;
+  }
+  .fundinglist_cardPercent {
+    flex: 1;
+    font-size: 14px;
+    color: #333333;
+    /* position: absolute; */
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 10px;
+  }

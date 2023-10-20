@@ -1,0 +1,15 @@
+
+.pro_editor{
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+.pro_editor p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 16px;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable) {
+  min-height: 400px;
+
+}
