@@ -101,7 +101,7 @@ const Funding = () => {
             {/* 프로젝트 내용2: 모인금액, 목표금액, 펀딩기간 */}
             <div className="middle-right-2">
               <div className="current-text">모인금액</div>
-              <div className="current">100억</div>
+              <div className="current">100억(표현예정)</div>
               <div className="goal">
                 <span className="mr1-title">목표금액</span>
                 <div className="mr1-text">{projectData[i].prod_current}원</div>
