@@ -51,7 +51,10 @@ const Canvas = ({categori, name, info, price}) => {
   return (
     
     <div className="canvas">
-      <Button type="primary" onClick={showDrawer}>
+      <Button type="primary" onClick={showDrawer} style={{
+              color: '#fff',
+              backgroundColor: '#EE833E'
+            }} >
         리워드 담기
       </Button>
       <Drawer
