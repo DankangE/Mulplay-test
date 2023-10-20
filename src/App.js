@@ -10,6 +10,7 @@ import MyProjectManage from "./pages/mypages/MyProjectManage";
 import Project from "./pages/myproject/Project";
 import Cart from "./pages/cart/Cart";
 import Funding from "./pages/funding/Funding";
+import FundingListPage from "./pages/fundinglist/FundingListPage";
 import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Main from "./pages/main/Main";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<Main />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/funding" element={<Funding />}></Route>
+          <Route path="/fundinglist" element={<FundingListPage />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/mypages" element={<MyPages />}>

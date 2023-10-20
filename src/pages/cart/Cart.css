@@ -127,10 +127,17 @@
   margin: 20px;
 }
 
-.cpayment input {
+.cpayment .cpayment-input {
+  width: 140px;
+  float: left;
   margin-right: 10px;
 }
 
+.cpayment-input input {
+  margin: 5px 10px 10px 10px;
+  float: left;
+}
+
 label {
-  margin-right: 20px;
+  margin-right: 10px;
 }

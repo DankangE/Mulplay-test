@@ -116,6 +116,7 @@ const Cart = () => {
 
         <div className="clist1">
           <div className="cpayment">
+            <div className="cpayment-input">
             <input
               type="radio"
               value="1"
@@ -123,7 +124,8 @@ const Cart = () => {
               onChange={HandleClickRadioButton2}
             />
             <label>카드 결제</label>
-
+            </div>
+            <div className="cpayment-input">
             <input
               type="radio"
               value="2"
@@ -131,13 +133,14 @@ const Cart = () => {
               onChange={HandleClickRadioButton2}
             />
             <label>계좌이체</label>
+            </div>
           </div>
         </div>
         <div className="clist2">
           <div className="clist2-text">최종 펀딩 금액</div>
           <div className="clist2-price">20,000,000원</div>
         </div>
-        <Link to="/funding">
+        <Link to="/mypages/myfundingproject">
           <div className="clist3">
             <Button_funding text={"결제하기"} minWidth={320} minHeight={50} />
           </div>

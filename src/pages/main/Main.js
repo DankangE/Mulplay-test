@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import React, { useState } from "react";
 import Card from "../../components/layout/MainCard";
 import Open from "../../components/layout/MainOpen";
@@ -25,7 +26,9 @@ function Main() {
       </div>
       <h2 className="main_mainTitle">인기 펀딩</h2>
       <div className="main_AppCard">
+        <Link to='/funding'>
         <Card />
+        </Link>
         <Card />
         <Card />
         <Card />
@@ -37,7 +40,9 @@ function Main() {
       <div className="main_line"></div>
       <h2 className="main_mainTitle">신규 펀딩</h2>
       <div className="main_AppCard">
+      <Link to='/funding'>
         <Card />
+      </Link>
         <Card />
         <Card />
         <Card />

@@ -1,5 +1,6 @@
 import "./FundingListPage.css"
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import {image1, image2, image3, image4, image5, image6, image7, image8} from '../../assets/image/listpageicon/ListImg'
 import FundingListPage_Card from "../../components/layout/ListCard";
 
@@ -88,14 +89,16 @@ const FundingListPage = () => {
                         </ul>
                     </div>
                 </div>
-
+                
                 <div className="">
+                <Link to='/funding'>
                     <FundingListPage_Card />
                     <FundingListPage_Card />
                     <FundingListPage_Card />
                     <FundingListPage_Card />
                     <FundingListPage_Card />
                     <FundingListPage_Card />
+                </Link>
                 </div>
             </div>
         </div>

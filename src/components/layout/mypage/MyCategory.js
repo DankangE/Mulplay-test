@@ -3,6 +3,7 @@ import * as React from "react";
 import "./MyCategory.css";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -28,11 +29,21 @@ function ColorTabs() {
         aria-label="secondary tabs example"
         centered
       >
+        <Link to='/mypages/myinfoedit'>
         <Tab value="one" label="회원 정보 수정" sx={{ fontSize: 16 }} />
+        </Link>
+        <Link to='/mypages/myinfoedit'>
         <Tab value="two" label="비밀번호 변경" sx={{ fontSize: 16 }} />
+        </Link>
+        <Link to='/mypages/myprojectmanage'>
         <Tab value="three" label="나의 프로젝트" sx={{ fontSize: 16 }} />
+        </Link>
+        <Link to='/mypages/myfundingproject'>
         <Tab value="four" label="후원한 프로젝트" sx={{ fontSize: 16 }} />
+        </Link>
+        <Link to='/mypages/mylikeproject'>
         <Tab value="five" label="관심 프로젝트" sx={{ fontSize: 16 }} />
+        </Link>
         <Tab value="six" label="문의" sx={{ fontSize: 16 }} />
       </Tabs>
     </Box>
