@@ -34,7 +34,7 @@ const bull = (
         <InputNumber />
         <br/>
         <br/>
-        <Canvas />
+        <Canvas categori={3} name={"후원금액"} info={"리워드 상관없이 후원하기"} price={1000}/>
       </Card>
     </Space>
   );

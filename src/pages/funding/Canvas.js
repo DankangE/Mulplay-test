@@ -33,6 +33,9 @@ const Canvas = ({categori, name, info, price}) => {
   if (categori == 2) {
     state = 'three';
   }
+  if (categori == 3) {
+    state = 'four';
+  }
 
   // const [cartItems, setCartItems] = useState(initialCartItem);
   // const totlalCount = cartItems.reduce(
