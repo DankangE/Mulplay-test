@@ -26,19 +26,10 @@ function CheckboxList() {
   const [checkbox10, setCheckbox10] = useState(false);
 
   const handleCheckboxChange = (name) => {
-    console.log(name);
     setCheckboxes({
       ...checkboxes,
       [name]: !checkboxes[name],
     });
-    console.log(checkboxes);
-    //console.log(document.getElementById(name).backgroundColor);
-
-    // if (checkboxes[name]) {
-    //   document.getElementById("lblbox1").style.backgroundColor = "orange";
-    // } else {
-    //   document.getElementById("lblbox1").style.backgroundColor = "white";
-    // }
   };
 
   useEffect(() => {

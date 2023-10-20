@@ -10,15 +10,15 @@ label {
   color: #333;
 }
 
+a {
+  text-decoration: none;
+}
 /* container */
 #container_login {
   width: 445px;
-  height: 540px;
-  background-color: #ddd;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 100px auto;
 }
-#container_login header {
+#container_login h1 {
   display: block;
   width: 100%;
   font-size: 36px;
@@ -27,81 +27,77 @@ label {
   color: #333;
   text-align: left;
 }
-#container_login form {
+#container_login .form_login {
   display: block;
 }
-#container_login .form .input_box {
+#container_login .form_login .input_box {
   width: 100%;
   margin-top: 20px;
 }
-#container_login .form .input_box label {
+#container_login .form_login .input_box label {
   color: #333;
   font-size: 1rem;
+  margin-bottom: 4px;
 }
-#container_login .form :where(.input_box input) {
+#container_login .form_login .input_box .input_text {
   width: 100%;
-  height: 50px;
+  height: 54px;
   font-size: 1rem;
   font-weight: 500;
   color: #888;
   outline: none;
   border: 1px solid #d1d1d1;
   border-radius: 6px;
-  margin-top: 4px;
   padding: 0 15px;
+}
+/* 이메일,주소 공통 */
+#container_login .form_login .input_box .column {
+  display: flex;
 }
 
 #container_login .input_box input:focus {
   box-shadow: 0 1px 0 rgb(0, 0, 0, 0.1);
 }
-/*
-.form .column {
+
+/* 체크박스 스타일 */
+
+.container_savefind {
+  margin-top: 10px;
   display: flex;
-  column-gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.form .gender_box {
-  margin-top: 20px;
+
+.chk_btn {
+  display: none;
 }
-.form .gender_box h3 {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #333;
-  margin-bottom: 4px;
-}
-.form :where(.gender_option, .gender) {
+.chk_btn + label {
   display: flex;
   align-items: center;
-  column-gap: 50px;
-  flex-wrap: wrap;
-}
-.form .gender {
-  column-gap: 4px;
-}
-
-.form .gender label {
-  color: #333;
-}
-[type="radio"] {
-  appearance: none;
-  border: max(2px, 0.1em) solid #d1d1d1;
-  border-radius: 50%;
-  width: 1.25em;
-  height: 1.25em;
-  transition: border 0.1s ease-in-out;
-}
-
-[type="radio"]:checked {
-  border: 0.4em solid rgb(238, 131, 62);
-}
-
-.form :where(.gender input, .gender label) {
   cursor: pointer;
 }
-.gender label {
-  color: #888;
+.chk_btn + label:before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  border: 2px solid #d1d1d1;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
-*/
-.form button {
+.chk_btn:checked + label:before {
+  background-image: url("../../assets/image/icon_checked.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 0;
+}
+
+/* 체크박스 스타일 끝 */
+
+/* 로그인 버튼 */
+.form_login .btn_login {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -109,84 +105,23 @@ label {
   height: 55px;
   border: none;
   border-radius: 8px;
-  background-color: rgb(238, 131, 62);
+  background-color: #ee833e;
   margin-top: 40px;
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.form button:hover {
-  background-color: rgb(253, 160, 98);
+.form_login .btn_login:hover {
+  background-color: #ffa66b;
 }
 
-/* Responsive */
-/* @media (max-width: 500px) {
-  .form .column {
-    flex-wrap: wrap;
-  }
-  .form :where(.gender_option, .gender) {
-    row-gap: 4px;
-  }
-} */
+/* sns 로그인 */
 
-/*
-.loginCheckFindCont {
-  display: flex;
-  justify-content: space-between;
-}
-.loginCheckbox #idCheck {
-  display: none;
-}
-.loginCheckbox .idCheckLabel {
-  display: flex;
-  cursor: pointer;
-}
-.loginCheckbox .idCheckLabel .checkboxIcon {
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
-  border: 1px solid #d1d1d1;
-  background-color: white;
-  margin-right: 8px;
-}
-.loginCheckbox .idCheckLabel .checkboxIcon svg {
-  display: none;
-}
-.loginCheckbox #idCheck:checked + .idCheckLabel .checkboxIcon svg {
-  display: block;
-}
-.idCheckLabel .checkboxText {
-  font-size: 0.875rem;
-  color: #888;
-}
-.findIdPw,
-.findIdPw * {
-  font-size: 0.875rem;
-  color: #888;
-  margin-bottom: 40px;
-}
-
-.loginButton {
-  width: 100%;
-  padding: 16px 0;
-  background-color: #ee833e;
-  border-radius: 16px;
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-.loginButton:hover {
-  opacity: 0.7;
-}
-
-.loginSns {
+.sns_container {
+  margin: 40px 0 20px 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
-.loginIcon {
+.sns_login {
   padding: 18px 28px;
   background-color: #fff;
   border: 1px solid #d1d1d1;
@@ -194,11 +129,11 @@ label {
   margin-right: 12px;
   cursor: pointer;
 }
-.loginIcon:last-child {
+.sns_container:last-child {
   margin-right: 0;
 }
 
-.loginSignup {
+.signup_btn {
   font-size: 14px;
   color: #888;
   font-weight: 400;
@@ -207,12 +142,13 @@ label {
   letter-spacing: -0.35px;
   text-align: center;
 }
-.loginSignup .signup {
-  font-size: 14px;
+.signup_btn .signup_title {
   color: #ee833e;
+  font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   letter-spacing: -0.35px;
-  border-bottom: 1px solid #ee833e;
+  padding-left: 4px;
 }
-*/

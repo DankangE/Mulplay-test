@@ -1,6 +1,4 @@
 import React from "react";
-import { LoggedOutHeader } from "../../components/head/Header";
-import Footer from "../../components/footer/Footer";
 import "./Funding.css";
 import Button_funding from "../../components/elements/Button_funding";
 import { useNavigate } from "react-router-dom";
@@ -15,12 +13,6 @@ import Fundingtab from "../../components/elements/Tab";
 
 // 리워드 박스
 import OutlinedCard from "./RewardCard";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 const Funding = () => {
   // 결제 페이지 이동 네비게이션
@@ -35,12 +27,7 @@ const Funding = () => {
   // 프로젝트 분류 0: 리뉴얼, 1: 유지보수
   const pclass = projectData[i].prod_class < 1 ? "리뉴얼" : "유지보수";
 
-  for (const key in Object.keys(tdataData)) {
-    console.log(tdataData[key].tdata_name);
-  }
-
-  console.log(projectData[i]);
-
+  // 하트 on/off
   const [heartResults, setHeartResults] = React.useState(false);
   const onClick = () => {
     if (heartResults === false) {
@@ -129,6 +116,7 @@ const Funding = () => {
             {/* 찜하기, 공유하기, 펀딩하기 버튼 */}
             <div className="middle-right-3">
               {/* <div className="fbtn1"><img className="sidebtn" src={OffHeart} alt="" onClick={onClick}/></div> */}
+              {/* 찜하기 */}
               {heartResults ? (
                 <div className="fbtn1">
                   <img
@@ -148,9 +136,11 @@ const Funding = () => {
                   />
                 </div>
               )}
+              {/* 공유하기 */}
               <div className="fbtn2">
                 <img className="sidebtn" src={Share} alt="" />
               </div>
+              {/* 펀딩하기 */}
               <Link to="/cart">
                 <div className="fbtn3">
                   <Button_funding
@@ -195,6 +185,10 @@ const Funding = () => {
         <div className="middle2">
           <div className="middle2-left2">
             <div className="ml2-component">
+              <p>{projectData[i].prod_content}</p>
+              <p>{projectData[i].prod_content}</p>
+              <p><img src={projectData[2].prod_mainimg} alt="" width="400px"/></p>
+              <p>{projectData[i].prod_content}</p>
               <Search />
             </div>
           </div>

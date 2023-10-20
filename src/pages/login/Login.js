@@ -7,46 +7,59 @@ import AppleIcon from "./../../assets/image/icon_apple.svg";
 const Login = () => {
   return (
     <section id="container_login">
-      <header>로그인</header>
-      <form action="#" className="form">
-        <div className="input_box">
+      <h1>로그인</h1>
+      <form action="#" className="form_login">
+        <div className="input_box id">
           <label>아이디</label>
-          <input type="text" placeholder="아이디를 입력해 주세요" required />
+          <input
+            className="input_text"
+            type="text"
+            placeholder="아이디를 입력해 주세요"
+            required
+          />
         </div>
-        <div className="input_box">
+        <div className="input_box pw">
           <label>비밀번호</label>
-          <input type="text" placeholder="비밀번호를 입력해 주세요" required />
+          <input
+            className="input_text"
+            type="text"
+            placeholder="비밀번호를 입력해 주세요"
+            required
+          />
         </div>
+        <div className="container_savefind">
+          <div class="save_box">
+            <input type="checkbox" class="chk_btn" id="chk_save" />
+            <label class="title" for="chk_save">
+              아이디 저장
+            </label>
+          </div>
 
-        <div class="save_box">
-          <input type="checkbox" id="check" name="save_id" />
-          <label for="check">아이디 저장</label>
+          <div class="find_box">
+            <a href="#" class="find_btn">
+              아이디 / 비밀번호 찾기
+            </a>
+          </div>
         </div>
-
-        <div class="find_box">
-          <a for="findId">아이디 </a>
-          <a for="findPw">비밀번호</a>
-        </div>
-
-        <button>로그인</button>
-
-        {/* <div className="loginSns">
-          <div className="loginIcon loginGoogle">
+        <button className="btn_login">로그인</button>
+        {/* sns 로그인 */}
+        <div className="sns_container">
+          <div className="sns_login google">
             <img src={GoogleIcon} alt="" />
           </div>
-          <div className="loginIcon loginKakaotalk">
+          <div className="sns_login kakao">
             <img src={KakaoIcon} alt="" />
           </div>
-          <div className="loginIcon loginApple">
+          <div className="sns_login apple">
             <img src={AppleIcon} alt="" />
           </div>
         </div>
-        <div className="loginSignup">
+        <div className="signup_btn">
           아직 계정이 없으신가요?{" "}
-          <a className="signup" href="#">
+          <a className="signup_title" href="#">
             회원가입
           </a>
-        </div> */}
+        </div>
       </form>
     </section>
   );

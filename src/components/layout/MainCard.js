@@ -1,13 +1,16 @@
 import React from "react";
 // import React, { useState } from "react";
+import card1 from "../../assets/image/card1.png";
 import "../../pages/main/Main.css";
+
+const images = [card1];
 
 function Card() {
   return (
     <div className="main_mainCard">
       <div className="main_dday">D-30</div>
       <div className="main_cardImg">
-        {/* <img className="card1"/> */}
+      <img src={card1} alt="card1" />
       </div>
       <div className="main_cardInfo">
         <div className="main_tag">금융</div>

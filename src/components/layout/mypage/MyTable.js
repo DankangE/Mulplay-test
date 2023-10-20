@@ -15,34 +15,13 @@ import Link from "@mui/joy/Link";
 import Tooltip from "@mui/joy/Tooltip";
 import Select from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
-import FilterListIcon from "@mui/icons-material/FilterList";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { visuallyHidden } from "@mui/utils";
 import Button from "@mui/joy/Button";
 
-function createData(pay_no, prod_name, user_id, price, date, payment) {
-  return {
-    pay_no,
-    prod_name,
-    user_id,
-    price,
-    date,
-    payment,
-  };
-}
-
-const rows = [
-  createData(1, "프로젝트1", "유저1", 1000, "2023-10-18", "송금완료"),
-  createData(2, "프로젝트1", "유저2", 1000, "2023-10-18", "송금완료"),
-  createData(3, "프로젝트1", "유저3", 1000, "2023-10-18", "결제대기"),
-  createData(4, "프로젝트1", "유저4", 1000, "2023-10-18", "송금완료"),
-  createData(5, "프로젝트2", "유저1", 1000, "2023-10-18", "송금완료"),
-  createData(6, "프로젝트2", "유저2", 1000, "2023-10-18", "결제대기"),
-];
-
-function labelDisplayedRows({ from, to, count }) {
+function labelDisplayeddata({ from, to, count }) {
   return `${from}–${to} of ${count !== -1 ? count : `more than ${to}`}`;
 }
 
@@ -62,10 +41,6 @@ function getComparator(order, orderBy) {
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-// Since 2020 all major browsers ensure sort stability with Array.prototype.sort().
-// stableSort() brings sort stability to non-modern browsers (notably IE11). If you
-// only support modern browsers you can replace stableSort(exampleArray, exampleComparator)
-// with exampleArray.slice().sort(exampleComparator)
 function stableSort(array, comparator) {
   const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
@@ -86,7 +61,7 @@ const headCells = [
     label: "No",
   },
   {
-    id: "prod_name",
+    id: "prod_title",
     numeric: true,
     disablePadding: false,
     label: "프로젝트이름",
@@ -98,13 +73,13 @@ const headCells = [
     label: "아이디",
   },
   {
-    id: "price",
+    id: "pay_price",
     numeric: true,
     disablePadding: false,
     label: "금액",
   },
   {
-    id: "date",
+    id: "pay_regdate",
     numeric: true,
     disablePadding: false,
     label: "일시",
@@ -243,7 +218,7 @@ function EnhancedTableToolbar(props) {
       ) : (
         <Typography
           level="body-lg"
-          sx={{ flex: "1 1 100%" }}
+          sx={{ flex: "1 1 100%", fontWeight: "bold", fontSize: "20px" }}
           id="tableTitle"
           component="div"
         >
@@ -258,11 +233,7 @@ function EnhancedTableToolbar(props) {
           </IconButton>
         </Tooltip>
       ) : (
-        <Tooltip title="Filter list">
-          <IconButton size="sm" variant="outlined" color="neutral">
-            <FilterListIcon />
-          </IconButton>
-        </Tooltip>
+        " "
       )}
     </Box>
   );
@@ -272,18 +243,22 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function TableSortAndSelection() {
+export default function TableSortAndSelection({ data }) {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [dataPerPage] = React.useState(5);
 
-  // Map rows into an object where keys are pay_no and values are button states
-  const initialButtonStates = rows.reduce(
-    (states, row) => ({
+  // Map data into an object where keys are pay_no and values are button states
+  const getStatusLabel = (prod_stat) => {
+    return prod_stat === 4 ? "송금완료" : "대기중";
+  };
+
+  const initialButtonStates = data.reduce(
+    (states, data) => ({
       ...states,
-      [row.pay_no]: {
+      [data.pay_no]: {
         label: "대기중",
         color: "neutral",
       },
@@ -298,7 +273,6 @@ export default function TableSortAndSelection() {
       ...prevState,
       [id]: {
         label: prevState[id]?.label === "대기중" ? "전달완료" : "대기중",
-        color: prevState[id]?.color === "neutral" ? "primary" : "neutral",
       },
     }));
   };
@@ -311,7 +285,7 @@ export default function TableSortAndSelection() {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelected = rows.map((n) => n.pay_no);
+      const newSelected = data.map((n) => n.pay_no);
       setSelected(newSelected);
       return;
     }
@@ -342,25 +316,24 @@ export default function TableSortAndSelection() {
     setPage(newPage);
   };
 
-  const handleChangeRowsPerPage = (event, newValue) => {
-    setRowsPerPage(parseInt(newValue.toString(), 10));
+  const handleChangedataPerPage = (event, newValue) => {
+    dataPerPage(parseInt(newValue.toString(), 10));
     setPage(0);
   };
 
-  const getLabelDisplayedRowsTo = () => {
-    if (rows.length === -1) {
-      return (page + 1) * rowsPerPage;
+  // getLabelDisplayedRowsTo 함수 수정
+  const getLabelDisplayeddataTo = () => {
+    if (data.length === -1) {
+      return data.length;
     }
-    return rowsPerPage === -1
-      ? rows.length
-      : Math.min(rows.length, (page + 1) * rowsPerPage);
+    return Math.min((page + 1) * dataPerPage, data.length);
   };
 
   const isSelected = (pay_no) => selected.indexOf(pay_no) !== -1;
 
-  // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+  // Avoid a layout jump when reaching the last page with empty data.
+  const emptydata =
+    page > 0 ? Math.max(0, (1 + page) * dataPerPage - data.length) : 0;
 
   return (
     <Sheet
@@ -375,13 +348,14 @@ export default function TableSortAndSelection() {
           "--TableCell-headBackground": "transparent",
           "--TableCell-selectedBackground": (theme) =>
             theme.vars.palette.success.softBg,
-          "& thead th:nth-type(1) & thead th:nth-type((2)": {
-            width: "20px",
+          "& thead th:nth-of-type(1), & thead th:nth-of-type(2)": {
+            width: "50px",
+            // 수정된 부분: padding을 추가하여 간격 조정
           },
-          "& thead th:nth-type((3)": {
-            width: "20%",
+          "& thead th:nth-of-type(3)": {
+            width: "25%",
           },
-          "& tr > *:nth-type((n+5)": { textAlign: "right" },
+          "& tr > *:nth-of-type(n+5)": { textAlign: "right" }, // 수정된 부분: nth-type 대신 nth-of-type 사용
         }}
       >
         <EnhancedTableHead
@@ -390,11 +364,11 @@ export default function TableSortAndSelection() {
           orderBy={orderBy}
           onSelectAllClick={handleSelectAllClick}
           onRequestSort={handleRequestSort}
-          rowCount={rows.length}
+          rowCount={data.length}
         />
         <tbody>
-          {stableSort(rows, getComparator(order, orderBy))
-            .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+          {stableSort(data, getComparator(order, orderBy))
+            .slice(page * dataPerPage, page * dataPerPage + dataPerPage)
             .map((row, index) => {
               const isItemSelected = isSelected(row.pay_no);
               const labelId = `enhanced-table-checkbox-${index}`;
@@ -409,10 +383,9 @@ export default function TableSortAndSelection() {
                   style={
                     isItemSelected
                       ? {
-                          "--TableCell-dataBackground":
-                            "var(--TableCell-selectedBackground)",
-                          "--TableCell-headBackground":
-                            "var(--TableCell-selectedBackground)",
+                          "--TableCell-dataBackground": "#EE833E",
+                          "--TableCell-headBackground": "#EE833E",
+                          opacity: "50%",
                         }
                       : {}
                   }
@@ -432,16 +405,16 @@ export default function TableSortAndSelection() {
                   <th id={labelId} scope="row">
                     {row.pay_no}
                   </th>
-                  <td>{row.prod_name}</td>
+
+                  <td>{row.prod_title}</td>
                   <td>{row.user_id}</td>
-                  <td>{row.price}</td>
-                  <td>{row.date}</td>
-                  <td>{row.payment}</td>
+                  <td style={{ textAlign: "right" }}>{row.pay_price}</td>
+                  <td style={{ textAlign: "right" }}>{row.pay_regdate}</td>
+                  <td>{getStatusLabel(row.prod_stat)}</td>
                   <td>
                     <Button
                       size="sm"
                       variant={buttonStates[row.pay_no]?.label || "plain"}
-                      color={buttonStates[row.pay_no]?.color || "neutral"}
                       onClick={() => toggleButton(row.pay_no)}
                     >
                       {buttonStates[row.pay_no]?.label || "Edit"}
@@ -450,10 +423,10 @@ export default function TableSortAndSelection() {
                 </tr>
               );
             })}
-          {emptyRows > 0 && (
+          {emptydata > 0 && (
             <tr
               style={{
-                height: `calc(${emptyRows} * 40px)`,
+                height: `calc(${emptydata} * 40px)`,
                 "--TableRow-hoverBackground": "transparent",
               }}
             >
@@ -475,19 +448,28 @@ export default function TableSortAndSelection() {
                 <FormControl orientation="horizontal" size="sm">
                   <FormLabel>데이터 갯수:</FormLabel>
                   <Select
-                    onChange={handleChangeRowsPerPage}
-                    value={rowsPerPage}
+                    onChange={handleChangedataPerPage}
+                    value={dataPerPage}
                   >
                     <Option value={5}>5</Option>
                     <Option value={10}>10</Option>
                     <Option value={25}>25</Option>
                   </Select>
                 </FormControl>
-                <Typography textAlign="right" sx={{ minWidth: 80 }}>
-                  {labelDisplayedRows({
-                    from: rows.length === 0 ? 0 : page * rowsPerPage + 1,
-                    to: getLabelDisplayedRowsTo(),
-                    count: rows.length === -1 ? -1 : rows.length,
+
+                <Typography
+                  textAlign="right"
+                  sx={{
+                    minWidth: 80,
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {labelDisplayeddata({
+                    from: data.length === -1 ? "-" : page * dataPerPage + 1,
+                    to: Math.min((page + 1) * dataPerPage, data.length),
+                    count: data.length === -1 ? "-" : data.length,
                   })}
                 </Typography>
                 <Box sx={{ display: "flex", gap: 1 }}>
@@ -506,8 +488,8 @@ export default function TableSortAndSelection() {
                     color="neutral"
                     variant="outlined"
                     disabled={
-                      rows.length !== -1
-                        ? page >= Math.ceil(rows.length / rowsPerPage) - 1
+                      data.length !== -1
+                        ? page >= Math.ceil(data.length / dataPerPage) - 1
                         : false
                     }
                     onClick={() => handleChangePage(page + 1)}

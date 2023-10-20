@@ -12,13 +12,13 @@ import NextBtn from "./NextBtn";
 
 function BasicInfo() {
   const [formData, setFormData] = useState({
-    profield: "",
-    protitle: "",
-    prodescription: "",
-    promoney: "",
-    prohashTag: "",
+    field: "",
+    title: "",
+    description: "",
+    money: "",
+    hashTag: "",
     forecast: "",
-    prostaff: "",
+    staff: "",
   });
 
   const handleChange = (e) => {
@@ -38,11 +38,11 @@ function BasicInfo() {
   return (
     <form onSubmit={handleSubmit} className="basicForm">
       <div>
-        <label htmlFor="profield">프로젝트 분야</label>
+        <label htmlFor="field">프로젝트 분야</label>
         <select
-          name="profield"
+          name="field"
           id="profield"
-          value={formData.profield}
+          value={formData.field}
           onChange={handleChange}
         >
           <option value="select">프로젝트 선택</option>
@@ -56,23 +56,23 @@ function BasicInfo() {
         </select>
       </div>
       <div>
-        <label htmlFor="protitle">프로젝트 제목</label>
+        <label htmlFor="title">프로젝트 제목</label>
         <input
           type="text"
           id="protitle"
-          name="protitle"
-          value={formData.protitle}
+          name="title"
+          value={formData.title}
           onChange={handleChange}
           placeholder="제목을 입력해주세요."
         />
       </div>
       <div>
-        <label htmlFor="prodescription">프로젝트 설명</label>
+        <label htmlFor="description">프로젝트 설명</label>
         <textarea
           type="text"
           id="prodescription"
-          name="prodescription"
-          value={formData.prodescription}
+          name="description"
+          value={formData.description}
           onChange={handleChange}
           placeholder="프로젝트에 대한 설명을 간단하게 입력해주세요."
         />
@@ -102,13 +102,13 @@ function BasicInfo() {
         <MyDatePicker />
       </div>
       <div className="goalmoney">
-        <label htmlFor="promoney">목표 금액</label>
+        <label htmlFor="money">목표 금액</label>
         <p>최소 50만원 ~ 최대 1억원 사이에서 목표금액을 설정해 주세요.</p>
         <input
           type="text"
           id="promoney"
-          name="promoney"
-          value={formData.promoney}
+          name="money"
+          value={formData.money}
           onChange={handleChange}
         />
       </div>
@@ -118,8 +118,8 @@ function BasicInfo() {
         <input
           type="text"
           id="prohashTag"
-          name="prohashTag"
-          value={formData.prohashTag}
+          name="hashTag"
+          value={formData.hashTag}
           onChange={handleChange}
         />
         <img className="tag-search" src={search} alt="검색" />
@@ -144,7 +144,7 @@ function BasicInfo() {
       </div>
 
       <div>
-        <label htmlFor="prostaff">참여 인력</label>
+        <label htmlFor="staff">참여 인력</label>
         <p>
           프로젝트에 참여하는 포지션을 작성해 주세요.(예: Front-end개발자,
           디자이너)
@@ -152,8 +152,8 @@ function BasicInfo() {
         <input
           type="text"
           id="prostaff"
-          name="prostaff"
-          value={formData.prostaff}
+          name="staff"
+          value={formData.staff}
           onChange={handleChange}
         />
       </div>
