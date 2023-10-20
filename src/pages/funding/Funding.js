@@ -237,13 +237,13 @@ const Search = () => {
   };
   return (
     <div>
+       {showResults ? <Results /> : null}
       <input
         className="search-btn"
         type="submit"
         value="상세보기"
         onClick={onClick}
       />
-      {showResults ? <Results /> : null}
     </div>
   );
 };
