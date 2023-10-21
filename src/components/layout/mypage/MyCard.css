@@ -1,25 +1,41 @@
 .myCard{
-    border: 1px solid #d2d2d2;
+    border: 1px solid #ececec;
     border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     display: flex;
     width: 800px;
-    padding: 10px;
+    padding: 15px;
     position: relative;
+    margin: 15px;
+  
 }
 
-.cardTitle{
+.myCard > .cardContent{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 60px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.myCard > .cardContent > .TopSection > .cardTitle{
     font-size: 20px;
     font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.cardContent{
+.myCard > .cardContent > .TopSection > .cardText{
     font-size:14px;
     color:#888888;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
-.cardDate{
+.myCard > .cardContent > .BottomSection > .cardDate{
     font-size: 12px;
     color: #555555;
     padding-top: 30px;
 };
+
+
 
 

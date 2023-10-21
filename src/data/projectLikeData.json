@@ -31,7 +31,7 @@
       "prod_genre": 2,
       "prod_mainimg": "https://cdn.pixabay.com/photo/2017/07/15/19/42/train-track-2507499_1280.jpg",
       "prod_content": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-      "prod_stat": 1,
+      "prod_stat": 5,
       "prod_intro": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
       "prod_time": 44,
       "prod_class": 1,
@@ -104,5 +104,6 @@
       "fund_no": 5,
       "like_no" :1
     }
+
    
   ]

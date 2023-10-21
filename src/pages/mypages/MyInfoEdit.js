@@ -54,16 +54,16 @@ export default function MyInfoEdit() {
     }
   };
 
-  const handleImageUpload = (event) => {
-    if (event.target.files && event.target.files[0]) {
-      let imgFile = event.target.files[0];
-      let reader = new FileReader();
-      reader.onloadend = () => {
-        setSelectedImage(reader.result);
-      };
-      reader.readAsDataURL(imgFile);
-    }
-  };
+  // const handleImageUpload = (event) => {
+  //   if (event.target.files && event.target.files[0]) {
+  //     let imgFile = event.target.files[0];
+  //     let reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       setSelectedImage(reader.result);
+  //     };
+  //     reader.readAsDataURL(imgFile);
+  //   }
+  // };
   return (
     <form className="myInfoEdit" onSubmit={handleSubmit}>
       <Stack spacing={1}>

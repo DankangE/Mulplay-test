@@ -6,19 +6,19 @@
     align-items: center;
 }
 
-.profileText{
+.myprofile > .profileText{
     padding-left: 30px;
     text-align: left;
 }
 
-.userName{
+.myprofile > .profileText > .userName{
     color: #333333;
     font-size: 28px;
     font-weight: bold;
     padding-bottom: 5px;
 
 }
-.easyLogin{
+.myprofile > .profileText > .easyLogin{
     color: #555555;
     font-size: 16px;
 }
